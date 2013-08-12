@@ -1,0 +1,17 @@
+# configuration backup file
+
+
+REMOTEADDR=192.168.122.169
+RMUSER=backupuser
+RMDIR=backup/
+PUB_KEY=~/.ssh/id_rsa.pub
+
+TMPDIR=tmp
+BACKDIR=backup
+EXCLUDE_GLOBAL=exclude.list
+backupdate=`date +%Y_%m_%d_%N`
+
+SAVE_TIME=90
+BACKUP_SIZE_LOC=10000000
+
+LOGFILE=/var/log/trbackup.log

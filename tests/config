@@ -1,0 +1,48 @@
+# configuration backup file
+
+
+REMOTEADDR=192.168.122.169
+RMUSER=backupuser
+RMDIR=backup/
+PUB_KEY=~/.ssh/id_rsa.pub
+
+TMPDIR=tmp
+BACKDIR=backup
+EXCLUDE_GLOBAL=../trbackup/etc/trbackup/exclude.list
+backupdate=`date +%Y_%m_%d_%N`
+
+SAVE_TIME=10
+BACKUP_SIZE_LOC=1000
+
+LOGFILE=log.log
+
+site_all()
+{
+	mode 1
+	dir /var/www/
+	sql
+}
+
+site_pack()
+{
+	mode 2
+	dir /var/www/
+	sql
+}
+
+site_tema()
+{
+	mode 3
+	dir /var/www/site2/
+	sql trbackup_site_db_1
+	sql trbackup_supsersite
+}
+
+site_13()
+{
+	mode 3
+	dir /var/www/site1/ exclude.list.1
+	dir /var/www/site2/ exclude.list.2
+	sql trbackup_site_db_1
+	sql trbackup_site_work
+}

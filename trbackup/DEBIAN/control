@@ -1,0 +1,8 @@
+Package: trbackup
+Version: 0.1
+Provides: trbackup
+Maintainer: Anton Dzyk <kixiro@gmail.com>
+Architecture: all
+Section: web
+Description: Backup script web projects.
+Pre-Depends: libshflags (>=1.0.3)

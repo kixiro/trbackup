@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+if [[ ! -f /etc/trbackup/config ]]
+then
+	cp /etc/trbackup/config.example /etc/trbackup/config
+fi
